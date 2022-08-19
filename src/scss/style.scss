@@ -1,0 +1,15 @@
+@import "vars";
+//@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+@import "template/header";
+
+.banner__img{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@import "template/advantages";

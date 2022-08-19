@@ -1,14 +1,23 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ua">
 @@include('html/head.html',{
-"title":"Title"
+"title":"Побутова техніка з Європи"
 })
 <body>
+
 @@include('html/header.html',{})
+
 <main>
+    <div class="banner">
+            <img class="banner__img" src="./img/banner.jpg" alt="banner image" >
+    </div>
+
+    @@include('html/advantages.html', {})
 
 </main>
+
 @@include('html/footer.html',{})
+
 <script src="./js/main.min.js"></script>
 </body>
 </html>

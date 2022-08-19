@@ -17,3 +17,13 @@ export function isWebp() {
         }
     });
 }
+
+
+//Обработка события нажатия по кнопке меню
+export function press(e){
+    //Добавляем обработчик события при нажатии
+    e.addEventListener('click', function (){
+        //Добавляем класс элементу
+        e.classList.toggle("nav__btn--active");
+    });
+}
