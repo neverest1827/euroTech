@@ -8,6 +8,7 @@ export function isWebp() {
         };
         webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
     }
+
     //
     testWebP(function (support) {
         if (support == true) {
@@ -20,10 +21,29 @@ export function isWebp() {
 
 
 //Обработка события нажатия по кнопке меню
-export function press(e){
+export function menuPress(selector) {
     //Добавляем обработчик события при нажатии
-    e.addEventListener('click', function (){
+    selector.addEventListener('click', function () {
         //Добавляем класс элементу
-        e.classList.toggle("nav__btn--active");
+        selector.classList.toggle("nav__btn--active");
     });
 }
+
+
+export function scrolTo() {
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (document.querySelector('.nav__btn--active')) {
+                document.querySelector('.nav__btn--active').classList.remove('nav__btn--active')
+            }
+            const id = smoothLink.getAttribute('href');
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+}
+

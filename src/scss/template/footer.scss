@@ -1,0 +1,86 @@
+.footer {
+  padding-top: 15px;
+  background-color: $main;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  color: white;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid white;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    max-width: 371px;
+    width: 100%;
+  }
+
+  &__telephone {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  &__telephone-item {
+    padding-left: 34px;
+    position: relative;
+
+    &:first-child::before {
+      content: 'тел:';
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+  }
+
+  &__telephone-link {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  &__payments {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__bottom {
+    padding: 12px 0;
+    text-align: center;
+  }
+}
+
+.social.footer__social {
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    &__top {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+.contacts {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__info {
+    max-width: 500px;
+    width: 100%;
+    padding: 0 50px;
+
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__info .contacts__info-tel {
+    text-align: center;
+    padding: 10px 0 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid $main;
+  }
+
+  &__info-item {
+    margin-bottom: 10px;
+  }
+
+  &__tel {
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $main;
+    position: relative;
+    padding-left: 28px;
+
+    &:hover {
+      text-decoration: underline $main;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/call-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 50px;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+
+  &__item-link {
+    transition: all 2s;
+  }
+}
+
+.facebook {
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  path {
+    transition: all .3s;
+  }
+
+  &:hover {
+
+    path {
+      fill: #4867aa;
+    }
+  }
+}
+
+.instagram {
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  path {
+    transition: all .3s;
+  }
+
+  &:hover {
+    path {
+      fill: #cf3587;
+    }
+  }
+}
+
+
+.telegram {
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  path {
+    transition: all .3s;
+  }
+
+  &:hover {
+    path {
+      fill: #239cd6;
+    }
+  }
+}
+
+.viber {
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  path {
+    transition: all .3s;
+  }
+
+  :hover {
+    path {
+      fill: #7b519c;
+    }
+  }
+}
+
+.map {
+  iframe {
+    width: 565px;
+    height: 500px;
+    border: 3px solid $main;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .contacts {
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info {
+      margin-bottom: 20px;
+    }
+  }
+  .map {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts {
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__info {
+      padding: 0;
+    }
+  }
+
+  .map {
+    iframe {
+      height: 300px;
+    }
+  }
+  .social {
+    flex-wrap: wrap;
+  }
+}
+
+
