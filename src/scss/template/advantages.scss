@@ -23,6 +23,12 @@
     margin-right: 20px;
   }
 
+  &__item-subtitle{
+    font-size: 16px;
+    @extend %roboto-500;
+    margin-bottom: 10px;
+  }
+
   &__item-box {
     height: 100px;
     width: 100px;

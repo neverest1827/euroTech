@@ -13,8 +13,12 @@
     width: 100%;
     padding: 0 50px;
 
+    span{
+      @extend %roboto-500;
+    }
+
     p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 24px;
       margin-bottom: 10px;
     }
@@ -61,6 +65,7 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
+    @extend %roboto-500;
   }
 }
 

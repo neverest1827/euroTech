@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: $bg;
+  @extend %roboto-400;
 }
 
 main {
@@ -26,5 +27,5 @@ main {
   text-align: center;
   font-size: 36px;
   line-height: 56px;
-
+  @extend %merriweather-700;
 }
