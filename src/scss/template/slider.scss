@@ -24,12 +24,12 @@
     &::before {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 19px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       border: 2px solid $main;
-      left: -8px;
-      top: -8px;
+      left: -7px;
+      top: -7px;
     }
   }
 }
@@ -87,7 +87,7 @@
   .slider {
     padding: 40px 0;
   }
-   .swiper-button-prev {
+  .swiper-button-prev {
     left: 20px;
   }
   .swiper-button-next {
